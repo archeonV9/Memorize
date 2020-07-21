@@ -28,7 +28,7 @@ namespace Memorize
         Nauka nowaNauka = new Nauka();
 
         public Form1()
-        { 
+        {
             InitializeComponent();
             nazwaPlikuLabel.Visible = false;
             slowkaAngTextBox.Visible = false;
@@ -40,8 +40,8 @@ namespace Memorize
             pytanieAngielskie.Visible = false;
             odpPlLabel.Visible = false;
 
-            
-            
+
+
 
         }
 
@@ -157,16 +157,17 @@ namespace Memorize
         {
             try
             {
-                if (currentIndex  == FileReader.slowkaANG.Count - 1)
+                if (currentIndex == FileReader.slowkaANG.Count - 1)
                 {
 
+
                     liczbaSlowekLabel.Text = FileReader.slowkaANG.Count.ToString();
-                    nowaNauka.slowkaNIEZNAM.Add(FileReader.slowkaANG[currentIndex]);
+                    nowaNauka.slowkaNIEZNAM.Add(FileReader.slowkaANG[currentIndex] + "-" + FileReader.slowkaPL[currentIndex]);
                     aktualnyNrPytania.Text = currentIndex.ToString();
                     bledneOdpRichTextBox.Lines = nowaNauka.slowkaNIEZNAM.ToArray();
                     nowaNauka.punktacjaZle++;
                     ileSlowekNieUmiemLabel.Text = nowaNauka.punktacjaZle.ToString();
-                    
+
                     Thread.Sleep(1000);
                     podsumowanieNaukiPanel.Visible = true;
 
@@ -176,8 +177,8 @@ namespace Memorize
                 }
                 else
                 {
-                    
-                    nowaNauka.slowkaNIEZNAM.Add(FileReader.slowkaANG[currentIndex]);
+
+                    nowaNauka.slowkaNIEZNAM.Add(FileReader.slowkaANG[currentIndex] + "-" + FileReader.slowkaPL[currentIndex]);
                     bledneOdpRichTextBox.Lines = nowaNauka.slowkaNIEZNAM.ToArray();
                     odpPlLabel.Text = FileReader.slowkaPL[currentIndex];
                     nowaNauka.punktacjaZle++;
