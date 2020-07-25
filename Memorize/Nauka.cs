@@ -13,11 +13,15 @@ namespace Memorize
         public int punktacjaZle { get; set; }
         public List<string> slowkaZNAM;
         public List<string> slowkaNIEZNAM;
+        public List<string> slowka;
+        public List<string> slowkaTlumaczenie;
 
         public Nauka()
         {
             slowkaZNAM = new List<string>();
             slowkaNIEZNAM = new List<string>();
+            slowka = new List<string>();
+            slowkaTlumaczenie = new List<string>();
         }
     }
 }

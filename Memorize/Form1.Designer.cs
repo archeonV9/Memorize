@@ -42,10 +42,19 @@
             this.gitHubBtn = new System.Windows.Forms.Button();
             this.homePanel = new System.Windows.Forms.Panel();
             this.materialyPanel = new System.Windows.Forms.Panel();
-            this.infoLabel1 = new System.Windows.Forms.Label();
             this.naukaPanel = new System.Windows.Forms.Panel();
-            this.infoLabel2 = new System.Windows.Forms.Label();
             this.podsumowanieNaukiPanel = new System.Windows.Forms.Panel();
+            this.powtorkaPanel = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.liczbaPytanLabel = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.nrPytaniaLabel = new System.Windows.Forms.Label();
+            this.powtorkaNieWiemLabel = new System.Windows.Forms.Button();
+            this.powtorkaWiemLabel = new System.Windows.Forms.Button();
+            this.powtorkaPokazOdpBtn = new System.Windows.Forms.Button();
+            this.slowkoTlumaczenieLabel = new System.Windows.Forms.Label();
+            this.slowkoLabel = new System.Windows.Forms.Label();
+            this.dalszaNaukaBtn = new System.Windows.Forms.Button();
             this.ileSlowekNieUmiemLabel = new System.Windows.Forms.Label();
             this.ileSlowekUmiemLabel = new System.Windows.Forms.Label();
             this.liczbaSlowekLabel = new System.Windows.Forms.Label();
@@ -85,6 +94,7 @@
             this.materialyPanel.SuspendLayout();
             this.naukaPanel.SuspendLayout();
             this.podsumowanieNaukiPanel.SuspendLayout();
+            this.powtorkaPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.paneTop.SuspendLayout();
             this.SuspendLayout();
@@ -258,7 +268,6 @@
             // 
             // materialyPanel
             // 
-            this.materialyPanel.Controls.Add(this.infoLabel1);
             this.materialyPanel.Controls.Add(this.naukaPanel);
             this.materialyPanel.Controls.Add(this.startNaukiBtn);
             this.materialyPanel.Controls.Add(this.nazwaPlikuLabel);
@@ -272,19 +281,8 @@
             this.materialyPanel.Size = new System.Drawing.Size(844, 514);
             this.materialyPanel.TabIndex = 3;
             // 
-            // infoLabel1
-            // 
-            this.infoLabel1.AutoSize = true;
-            this.infoLabel1.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.infoLabel1.Location = new System.Drawing.Point(275, 88);
-            this.infoLabel1.Name = "infoLabel1";
-            this.infoLabel1.Size = new System.Drawing.Size(223, 18);
-            this.infoLabel1.TabIndex = 7;
-            this.infoLabel1.Text = "*słowka muszą być rozdzielone \'-\'";
-            // 
             // naukaPanel
             // 
-            this.naukaPanel.Controls.Add(this.infoLabel2);
             this.naukaPanel.Controls.Add(this.podsumowanieNaukiPanel);
             this.naukaPanel.Controls.Add(this.label3);
             this.naukaPanel.Controls.Add(this.liczbaPytan);
@@ -301,18 +299,10 @@
             this.naukaPanel.Size = new System.Drawing.Size(844, 514);
             this.naukaPanel.TabIndex = 6;
             // 
-            // infoLabel2
-            // 
-            this.infoLabel2.AutoSize = true;
-            this.infoLabel2.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.infoLabel2.Location = new System.Drawing.Point(312, 106);
-            this.infoLabel2.Name = "infoLabel2";
-            this.infoLabel2.Size = new System.Drawing.Size(141, 18);
-            this.infoLabel2.TabIndex = 8;
-            this.infoLabel2.Text = "przykład: run-biegać";
-            // 
             // podsumowanieNaukiPanel
             // 
+            this.podsumowanieNaukiPanel.Controls.Add(this.powtorkaPanel);
+            this.podsumowanieNaukiPanel.Controls.Add(this.dalszaNaukaBtn);
             this.podsumowanieNaukiPanel.Controls.Add(this.ileSlowekNieUmiemLabel);
             this.podsumowanieNaukiPanel.Controls.Add(this.ileSlowekUmiemLabel);
             this.podsumowanieNaukiPanel.Controls.Add(this.liczbaSlowekLabel);
@@ -328,11 +318,148 @@
             this.podsumowanieNaukiPanel.Size = new System.Drawing.Size(844, 514);
             this.podsumowanieNaukiPanel.TabIndex = 9;
             // 
+            // powtorkaPanel
+            // 
+            this.powtorkaPanel.Controls.Add(this.label19);
+            this.powtorkaPanel.Controls.Add(this.liczbaPytanLabel);
+            this.powtorkaPanel.Controls.Add(this.label21);
+            this.powtorkaPanel.Controls.Add(this.nrPytaniaLabel);
+            this.powtorkaPanel.Controls.Add(this.powtorkaNieWiemLabel);
+            this.powtorkaPanel.Controls.Add(this.powtorkaWiemLabel);
+            this.powtorkaPanel.Controls.Add(this.powtorkaPokazOdpBtn);
+            this.powtorkaPanel.Controls.Add(this.slowkoTlumaczenieLabel);
+            this.powtorkaPanel.Controls.Add(this.slowkoLabel);
+            this.powtorkaPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.powtorkaPanel.Location = new System.Drawing.Point(0, 0);
+            this.powtorkaPanel.Name = "powtorkaPanel";
+            this.powtorkaPanel.Size = new System.Drawing.Size(844, 514);
+            this.powtorkaPanel.TabIndex = 11;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(375, 168);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(26, 34);
+            this.label19.TabIndex = 8;
+            this.label19.Text = "-";
+            // 
+            // liczbaPytanLabel
+            // 
+            this.liczbaPytanLabel.AutoSize = true;
+            this.liczbaPytanLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.liczbaPytanLabel.Location = new System.Drawing.Point(437, 455);
+            this.liczbaPytanLabel.Name = "liczbaPytanLabel";
+            this.liczbaPytanLabel.Size = new System.Drawing.Size(34, 40);
+            this.liczbaPytanLabel.TabIndex = 7;
+            this.liczbaPytanLabel.Text = "0";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(391, 455);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(29, 40);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "/";
+            // 
+            // nrPytaniaLabel
+            // 
+            this.nrPytaniaLabel.AutoSize = true;
+            this.nrPytaniaLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nrPytaniaLabel.Location = new System.Drawing.Point(341, 455);
+            this.nrPytaniaLabel.Name = "nrPytaniaLabel";
+            this.nrPytaniaLabel.Size = new System.Drawing.Size(34, 40);
+            this.nrPytaniaLabel.TabIndex = 5;
+            this.nrPytaniaLabel.Text = "0";
+            // 
+            // powtorkaNieWiemLabel
+            // 
+            this.powtorkaNieWiemLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.powtorkaNieWiemLabel.FlatAppearance.BorderSize = 0;
+            this.powtorkaNieWiemLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.powtorkaNieWiemLabel.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F);
+            this.powtorkaNieWiemLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.powtorkaNieWiemLabel.Location = new System.Drawing.Point(418, 382);
+            this.powtorkaNieWiemLabel.Name = "powtorkaNieWiemLabel";
+            this.powtorkaNieWiemLabel.Size = new System.Drawing.Size(160, 56);
+            this.powtorkaNieWiemLabel.TabIndex = 4;
+            this.powtorkaNieWiemLabel.Text = "Nie wiem";
+            this.powtorkaNieWiemLabel.UseVisualStyleBackColor = false;
+            this.powtorkaNieWiemLabel.Click += new System.EventHandler(this.powtorkaNieWiemLabel_Click);
+            // 
+            // powtorkaWiemLabel
+            // 
+            this.powtorkaWiemLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.powtorkaWiemLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.powtorkaWiemLabel.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.powtorkaWiemLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.powtorkaWiemLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.powtorkaWiemLabel.Location = new System.Drawing.Point(232, 382);
+            this.powtorkaWiemLabel.Name = "powtorkaWiemLabel";
+            this.powtorkaWiemLabel.Size = new System.Drawing.Size(160, 56);
+            this.powtorkaWiemLabel.TabIndex = 3;
+            this.powtorkaWiemLabel.Text = "Wiem";
+            this.powtorkaWiemLabel.UseVisualStyleBackColor = false;
+            this.powtorkaWiemLabel.Click += new System.EventHandler(this.powtorkaWiemLabel_Click);
+            // 
+            // powtorkaPokazOdpBtn
+            // 
+            this.powtorkaPokazOdpBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(179)))), ((int)(((byte)(210)))));
+            this.powtorkaPokazOdpBtn.FlatAppearance.BorderSize = 0;
+            this.powtorkaPokazOdpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.powtorkaPokazOdpBtn.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F);
+            this.powtorkaPokazOdpBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.powtorkaPokazOdpBtn.Location = new System.Drawing.Point(300, 277);
+            this.powtorkaPokazOdpBtn.Name = "powtorkaPokazOdpBtn";
+            this.powtorkaPokazOdpBtn.Size = new System.Drawing.Size(200, 56);
+            this.powtorkaPokazOdpBtn.TabIndex = 2;
+            this.powtorkaPokazOdpBtn.Text = "Pokaż odpowiedź";
+            this.powtorkaPokazOdpBtn.UseVisualStyleBackColor = false;
+            this.powtorkaPokazOdpBtn.Click += new System.EventHandler(this.powtorkaPokazOdpBtn_Click);
+            // 
+            // slowkoTlumaczenieLabel
+            // 
+            this.slowkoTlumaczenieLabel.AutoSize = true;
+            this.slowkoTlumaczenieLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slowkoTlumaczenieLabel.Location = new System.Drawing.Point(476, 163);
+            this.slowkoTlumaczenieLabel.Name = "slowkoTlumaczenieLabel";
+            this.slowkoTlumaczenieLabel.Size = new System.Drawing.Size(88, 34);
+            this.slowkoTlumaczenieLabel.TabIndex = 1;
+            this.slowkoTlumaczenieLabel.Text = "label4";
+            // 
+            // slowkoLabel
+            // 
+            this.slowkoLabel.AutoSize = true;
+            this.slowkoLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slowkoLabel.Location = new System.Drawing.Point(192, 161);
+            this.slowkoLabel.Name = "slowkoLabel";
+            this.slowkoLabel.Size = new System.Drawing.Size(88, 34);
+            this.slowkoLabel.TabIndex = 0;
+            this.slowkoLabel.Text = "label3";
+            // 
+            // dalszaNaukaBtn
+            // 
+            this.dalszaNaukaBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(179)))), ((int)(((byte)(210)))));
+            this.dalszaNaukaBtn.FlatAppearance.BorderSize = 0;
+            this.dalszaNaukaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dalszaNaukaBtn.Font = new System.Drawing.Font("Baskerville Old Face", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dalszaNaukaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dalszaNaukaBtn.Location = new System.Drawing.Point(549, 429);
+            this.dalszaNaukaBtn.Name = "dalszaNaukaBtn";
+            this.dalszaNaukaBtn.Size = new System.Drawing.Size(252, 42);
+            this.dalszaNaukaBtn.TabIndex = 10;
+            this.dalszaNaukaBtn.Text = "Ucz się dalej";
+            this.dalszaNaukaBtn.UseVisualStyleBackColor = false;
+            this.dalszaNaukaBtn.Click += new System.EventHandler(this.dalszaNaukaBtn_Click);
+            // 
             // ileSlowekNieUmiemLabel
             // 
             this.ileSlowekNieUmiemLabel.AutoSize = true;
             this.ileSlowekNieUmiemLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ileSlowekNieUmiemLabel.Location = new System.Drawing.Point(217, 276);
+            this.ileSlowekNieUmiemLabel.Location = new System.Drawing.Point(311, 267);
             this.ileSlowekNieUmiemLabel.Name = "ileSlowekNieUmiemLabel";
             this.ileSlowekNieUmiemLabel.Size = new System.Drawing.Size(20, 23);
             this.ileSlowekNieUmiemLabel.TabIndex = 9;
@@ -342,7 +469,7 @@
             // 
             this.ileSlowekUmiemLabel.AutoSize = true;
             this.ileSlowekUmiemLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ileSlowekUmiemLabel.Location = new System.Drawing.Point(217, 237);
+            this.ileSlowekUmiemLabel.Location = new System.Drawing.Point(311, 228);
             this.ileSlowekUmiemLabel.Name = "ileSlowekUmiemLabel";
             this.ileSlowekUmiemLabel.Size = new System.Drawing.Size(20, 23);
             this.ileSlowekUmiemLabel.TabIndex = 8;
@@ -352,7 +479,7 @@
             // 
             this.liczbaSlowekLabel.AutoSize = true;
             this.liczbaSlowekLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.liczbaSlowekLabel.Location = new System.Drawing.Point(217, 320);
+            this.liczbaSlowekLabel.Location = new System.Drawing.Point(311, 311);
             this.liczbaSlowekLabel.Name = "liczbaSlowekLabel";
             this.liczbaSlowekLabel.Size = new System.Drawing.Size(20, 23);
             this.liczbaSlowekLabel.TabIndex = 7;
@@ -362,7 +489,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(666, 169);
+            this.label9.Location = new System.Drawing.Point(579, 101);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(117, 23);
             this.label9.TabIndex = 6;
@@ -372,7 +499,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(78, 320);
+            this.label8.Location = new System.Drawing.Point(172, 311);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(128, 23);
             this.label8.TabIndex = 5;
@@ -382,7 +509,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(76, 158);
+            this.label7.Location = new System.Drawing.Point(170, 149);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(268, 34);
             this.label7.TabIndex = 3;
@@ -391,9 +518,10 @@
             // bledneOdpRichTextBox
             // 
             this.bledneOdpRichTextBox.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.bledneOdpRichTextBox.Location = new System.Drawing.Point(646, 195);
+            this.bledneOdpRichTextBox.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bledneOdpRichTextBox.Location = new System.Drawing.Point(549, 127);
             this.bledneOdpRichTextBox.Name = "bledneOdpRichTextBox";
-            this.bledneOdpRichTextBox.Size = new System.Drawing.Size(165, 296);
+            this.bledneOdpRichTextBox.Size = new System.Drawing.Size(252, 296);
             this.bledneOdpRichTextBox.TabIndex = 2;
             this.bledneOdpRichTextBox.Text = "";
             // 
@@ -401,7 +529,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(102, 276);
+            this.label5.Location = new System.Drawing.Point(196, 267);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 23);
             this.label5.TabIndex = 1;
@@ -411,7 +539,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(137, 236);
+            this.label4.Location = new System.Drawing.Point(231, 227);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 23);
             this.label4.TabIndex = 0;
@@ -692,6 +820,8 @@
             this.naukaPanel.PerformLayout();
             this.podsumowanieNaukiPanel.ResumeLayout(false);
             this.podsumowanieNaukiPanel.PerformLayout();
+            this.powtorkaPanel.ResumeLayout(false);
+            this.powtorkaPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.paneTop.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -728,8 +858,6 @@
         private System.Windows.Forms.Label odpPlLabel;
         private System.Windows.Forms.Label pytanieAngielskie;
         private System.Windows.Forms.Label liczbaPytan;
-        private System.Windows.Forms.Label infoLabel2;
-        private System.Windows.Forms.Label infoLabel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel podsumowanieNaukiPanel;
         private System.Windows.Forms.Label label8;
@@ -747,6 +875,17 @@
         private System.Windows.Forms.Button gitHubBtn;
         private System.Windows.Forms.Button linkedInBtn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button dalszaNaukaBtn;
+        private System.Windows.Forms.Panel powtorkaPanel;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label liczbaPytanLabel;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label nrPytaniaLabel;
+        private System.Windows.Forms.Button powtorkaNieWiemLabel;
+        private System.Windows.Forms.Button powtorkaWiemLabel;
+        private System.Windows.Forms.Button powtorkaPokazOdpBtn;
+        private System.Windows.Forms.Label slowkoTlumaczenieLabel;
+        private System.Windows.Forms.Label slowkoLabel;
     }
 }
 
